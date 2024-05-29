@@ -272,6 +272,7 @@ This is to certify that the Project report on {\textbf{“ DIRT DEFENDER CEILING
 \end{center}
 }
 
+
 \end{titlepage}
 %===========================================================================
 %===========================ACKNOWLEDGEMENT=================================
@@ -304,6 +305,10 @@ Finally, we would also like to thank our Project Coordinators \textbf{Dr. P. Kay
 \raggedleft
 { P.Akshitha (20WH1A1260)}\\ \\
 \raggedleft
+ \begin{center}
+    \vspace*{\fill}
+    \textbf{IV}
+    \end{center}
 \end{normalsize}
 \end{titlepage}
 %===========================ABSTRACT========================================
@@ -329,18 +334,14 @@ dust-free. What sets this system apart is its integrated dust collection mechani
 removed dust is efficiently stored in a designated container. This collected dust can be
 effortlessly released at the user's discretion, eliminating the need for manual cleaning and the
 associated hassles.
-\newline
-\newline
 \\
 \textbf{Keywords:} Self-cleaning ceiling fans, Specialized sensors, Cutting-edge technology, Cleaning task, Integrated dust collection, User control.
-\end{normalsize}\\\\\\\\\\\\\\\\\\\\
-\begin{normalsize}
-    \begin{center}
+ \begin{center}
     \vspace*{\fill}
     \textbf{V}
     \end{center}
-    \end{normalsize}
-\end{titlepage}
+\end{normalsize}\\\\\\\\\\\\\\\\\\\\
+
 %=====================LIST-OF-FIGURES======================================
 \begin{titlepage}
 
@@ -711,17 +712,7 @@ associated hassles.
 \end{large}
 }
 
-\noindent 
-{\begin{large}
-\text{ \tab\tab 7.1 Conclusion } 
-\end{large}
-}
-\hfill 
-{
-\begin{large}
-\textbf{48}
-\end{large}
-}
+
 
 
 
@@ -2053,6 +2044,14 @@ mental Research, Volume 226, 2023.\\
 
 \end{normalsize}
 \end{document}
+
+
+
+
+
+
+
+
 
 
 
