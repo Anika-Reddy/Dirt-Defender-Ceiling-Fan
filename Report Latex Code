@@ -1,0 +1,2065 @@
+\documentclass[12pt, English]{article}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, linkcolor=blue]{hyperref}
+\usepackage[spanish]{babel}
+\selectlanguage{spanish}
+\usepackage[utf8]{inputenc}
+\usepackage[svgnames]{xcolor}
+\renewcommand{\baselinestretch}{1.5}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\usepackage{sectsty}
+\usepackage{fancyhdr}
+\fancyfoot[C]{}
+\renewcommand{\headrulewidth}{4pt}
+\renewcommand{\footrulewidth}{4pt}
+\sectionfont{\fontsize{17.28}{17.28}\selectfont}
+\usepackage{mathptmx}
+\usepackage[font=small,labelfont=bf]{caption}
+\renewcommand{\figurename}{Figure}
+\usepackage[figurename=Figure]{caption}
+\usepackage{ragged2e}
+\usepackage{multirow}
+\addtolength{\topmargin}{-57pt}
+\addtolength{\oddsidemargin}{92pt}
+\addtolength{\footskip}{50pt}
+\justifying
+
+\usepackage{listings}
+\usepackage{afterpage}
+\pagestyle{plain}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+
+%\lstset{language=R,
+%    basicstyle=\small\ttfamily,
+%   stringstyle=\color{DarkGreen},
+%    otherkeywords={0,1,2,3,4,5,6,7,8,9},
+%    morekeywords={TRUE,FALSE},
+%    deletekeywords={data,frame,length,as,character},
+%    keywordstyle=\color{blue},
+%    commentstyle=\color{DarkGreen},
+%}
+
+\lstset{frame=tb,
+language=R,
+aboveskip=3mm,
+belowskip=3mm,
+showstringspaces=false,
+columns=flexible,
+numbers=none,
+keywordstyle=\color{blue},
+numberstyle=\tiny\color{gray},
+commentstyle=\color{dkgreen},
+stringstyle=\color{mauve},
+breaklines=true,
+breakatwhitespace=true,
+tabsize=3
+}
+
+\usepackage{here}
+
+
+\textheight=21cm
+\textwidth=17cm
+%\topmargin=-1cm
+\oddsidemargin=0cm
+\parindent=0mm
+\pagestyle{plain}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% La siguiente instrucciÃ³n pone el curso automÃ¡ticamente%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{color}
+\usepackage{ragged2e}
+
+\captionsetup[table]{name=Table}
+\global\let\date\relax
+\newcounter{unomenos}
+\setcounter{unomenos}{\number\year}
+\addtocounter{unomenos}{-1}
+\stepcounter{unomenos}
+
+\begin{document}
+
+\begin{titlepage}
+
+\begin{center}
+\vspace*{-1in}
+
+
+
+%==========================================================================
+%==========================================================================
+\begin{Large}
+\vspace*{0.1in}
+\textbf{A Project Report\\on}
+\end{Large}
+\vspace*{0.0in}
+\textbf{\Large \\ DIRT DEFENDER CEILING FAN}
+
+%==========================================================================
+\begin{large}
+\textbf{{Submitted in partial fulfillment of the requirements \\
+for the award of degree of}}\\
+\end{large}
+%==========================================================================
+%==========================================================================
+\begin{large}
+{\textbf{BACHELOR OF TECHNOLOGY \\ in\\ Information Technology\\by}}\\
+\end{large}
+%===========================================================================
+
+\textit{\textbf{\large P.Neela (20WH1A1202)}} \\
+\textit{\textbf{\large K.Mounika (20WH1A1222)}} \\
+\textit{\textbf{\large B.Anika (20WH1A1232)}} \\
+\textit{\textbf{\large P.Akshitha (20WH1A1260)}} \\
+%==========================================================================
+\begin{large}
+\textit{\textbf{Under the esteemed guidance of}}\\
+\end{large}
+%==========================================================================
+\textbf{\large \textit {Ms. D. Sangeetha}}\\
+\textbf{\large \textit {Assistant Professor}}\\
+%==========================================================================
+\begin{center}
+\includegraphics[width=1.6cm]{Vishnu.jpg}
+\end{center}
+%==========================================================================
+\begin{large}
+\textbf{Department of Information Technology}\\
+\end{large}
+%==========================================================================
+\begin{Large}
+\textbf{BVRIT HYDERABAD College of Engineering for Women}\\
+\end{Large}
+\begin{normalsize}
+\textbf{ Rajiv Gandhi Nagar, Nizampet Road, Bachupally, Hyderabad – 500090}
+
+%===========================================================================
+\textbf{(Affiliated to Jawaharlal Nehru Technological University, Hyderabad)}\\
+
+\textbf{(NAAC ‘A’ Grade \& NBA Accredited- ECE, EEE, CSE \& IT)}\\
+
+\end{normalsize}
+\begin{large}
+\vspace{0.01in}
+\textbf{ June, 2024}\\
+\end{large}
+\end{center}
+\end{titlepage}
+%===========================================================================
+
+\newcommand{\CC}{C\nolinebreak\hspace{-.05em}\raisebox{.4ex}{\tiny\bf +}\nolinebreak\hspace{-.10em}\raisebox{.4ex}{\tiny\bf +}}
+\def\CC{{C\nolinebreak[4]\hspace{-.05em}\raisebox{.4ex}{\tiny\bf ++}}}
+%===========================DECLARATION=====================================
+\begin{titlepage}
+\begin{center}
+    \textbf{\LARGE DECLARATION}\\
+\end{center}
+\vspace*{0.2in}
+
+We hereby declare that the work presented in this project entitled {\textbf{“DIRT DEFENDER CEILING FAN”}} submitted towards completion of Major Project in IV year II sem of B.Tech IT at “BVRIT HYDERABAD College of Engineering for Women”, Hyderabad is an authentic record of our original work carried out under the esteemed guidance of { Ms. D. Sangeetha, Assistant Professor}, Department of Information Technology.
+
+
+\raggedleft
+\vspace*{0.5in}
+
+\textcolor{black}{P.Neela (20WH1A1202)}\\
+\raggedleft
+\vspace*{0.3in}
+\textcolor{black}{K.Mounika (20WH1A1222)}\\
+\raggedleft
+\vspace*{0.3in}
+\textcolor{black}{B.Anika (20WH1A1232)}\\
+\raggedleft
+\vspace*{0.3in}
+\textcolor{black}{P.Akshitha (20WH1A1260)}\\
+
+\end{titlepage}
+%===========================================================================
+%===========================CERTIFICATE=====================================
+\begin{titlepage}
+\vspace*{-0.5in}
+\begin{center}
+\includegraphics[width=2.8cm]{Vishnu.jpg}
+\end{center}
+%===========================================================================
+\begin{center}
+\begin{large}
+\textbf{BVRIT HYDERABAD\\ College of Engineering for Women}\\
+\end{large}
+\begin{footnotesize}
+\textbf{ Rajiv Gandhi Nagar, Nizampet Road, Bachupally, Hyderabad – 500090}\\
+\vspace*{0.1in}
+\textbf{(Affiliated to Jawaharlal Nehru Technological University Hyderabad)}\\
+\textbf{(NAAC ‘A’ Grade \& NBA Accredited- ECE, EEE, CSE \& IT)}\\
+\end{footnotesize}
+\end{center}
+%===========================================================================
+\begin{center}
+    \textbf{\large CERTIFICATE}\\
+\end{center}
+
+\begin{normalsize}
+
+
+This is to certify that the Project report on {\textbf{“ DIRT DEFENDER CEILING FAN ”}} is a bonafide work carried out by  {\textbf{P.Neela
+(20WH1A1202), K.Mounika (20WH1A1222), B.Anika (20WH1A1232)}} and {\textbf{P. Akshitha (20WH1A1260)}} in the partial fulfillment for the award of B.Tech degree in \textbf{Information Technology, BVRIT HYDERABAD College of Engineering for Women, Bachupally, Hyderabad} affiliated to Jawaharlal Nehru Technological University, Hyderabad under my guidance and supervision.
+\newline
+\tab The results embodied in the project work have not been submitted to any other university or institute for the award of any degree or diploma.
+\end{normalsize}
+
+
+\vspace*{0.6in}
+
+\noindent 
+{\begin{normalsize}
+{\textbf{Internal Guide}}
+\end{normalsize}
+}
+\hfill 
+{
+\begin{normalsize}
+\textbf{ Head of the Department}
+\end{normalsize}
+}\\
+%===========================================================================
+\noindent 
+{\begin{normalsize}
+{\textbf{Ms. D. Sangeetha }}
+\end{normalsize}
+}
+\hfill 
+{
+\begin{normalsize}
+\textbf{Dr. Aruna Rao S.L}
+\end{normalsize}
+}\\
+%===========================================================================
+\noindent
+{\begin{normalsize}
+{\textbf{Assistant Professor}}
+\end{normalsize}
+}
+\hspace{9.4cm}
+{
+\begin{normalsize}
+\textbf{Professor \& HoD }
+\end{normalsize}
+}\\
+%===========================================================================
+\noindent 
+{\begin{normalsize}
+{\textbf{Department of IT}}
+\end{normalsize}
+}
+\hspace{9.7cm} 
+{
+\begin{normalsize}
+{\textbf{Department of IT}}
+\end{normalsize}
+}
+\\
+\\
+
+
+\noindent 
+{\begin{center}
+{\textbf {External Examiner}}
+\end{center}
+}
+
+\end{titlepage}
+%===========================================================================
+%===========================ACKNOWLEDGEMENT=================================
+\begin{titlepage}
+\begin{center}
+    \textbf{\normalsize \underline{ACKNOWLEDGEMENT}}\\
+\end{center}
+\vspace*{0.2in}
+\begin{normalsize}
+We would like to express our profound gratitude and thanks to \textbf{Dr. K. V. N. Sunitha, Principal, BVRIT HYDERABAD College of Engineering for Women} for providing the working facilities in the college.\\
+\newline
+Our sincere thanks and gratitude to \textbf{Dr. Aruna Rao S.L, Professor \& Head, Department of IT, BVRIT HYDERABAD College of Engineering for Women} for all the timely support, constant guidance and valuable suggestions during the period of our project.\\
+\newline
+We are extremely thankful and indebted to our internal guide, \textbf{Ms. D. Sangeetha, Assistant Professor, Department of IT, BVRIT HYDERABAD College of Engineering for Women} for her constant guidance, encouragement and moral support throughout the project.\\
+\newline
+Finally, we would also like to thank our Project Coordinators \textbf{Dr. P. Kayal, Associate Professor \& Ms. K. Bharathi,  Associate Professor}, all the faculty and staff of Department of IT who helped us directly or indirectly, parents and friends for their cooperation in completing the project work.
+\end{normalsize}
+
+\raggedleft
+\vspace*{0.5in}
+\begin{normalsize}
+{ P.Neela (20WH1A1202)}\\ \\
+\vspace*{0.25in}
+\raggedleft
+{ K.Mounika (20WH1A1222)}\\ \\
+\vspace*{0.25in}
+\raggedleft
+{ B.Anika (20WH1A1232)}\\\\
+\vspace*{0.25in}
+\raggedleft
+{ P.Akshitha (20WH1A1260)}\\ \\
+\raggedleft
+\end{normalsize}
+\end{titlepage}
+%===========================ABSTRACT========================================
+\begin{titlepage}
+
+\begin{center}
+    \textbf{\Large ABSTRACT}\\
+\end{center}
+
+\begin{normalsize}
+Dirt Defender Ceiling Fan system, a revolutionary approach to simplify the upkeep of ceiling
+fans commonly found in homes and commercial spaces. In response to the persistent issue of fan
+blades accumulating dust and debris, which can not only diminish their efficiency but also
+present a daunting cleaning task, this innovative system employs cutting-edge technology and
+design features to provide a practical solution. The heart of the system lies in its ability to
+autonomously detect dust accumulation through specialized sensors, akin to the way our eyes
+perceive things. When these sensors identify a significant amount of dust on the fan blades, they
+promptly send a message to a dedicated mobile app specifically tailored for self-cleaning ceiling
+fans. Users are then empowered to take control with a simple tap on the app, initiating the
+cleaning process. This operation relies on clever mechanical components that employ small
+brushes or rubber wipers to gently and effectively clean the fan blades, ensuring they remain
+dust-free. What sets this system apart is its integrated dust collection mechanism, wherein the
+removed dust is efficiently stored in a designated container. This collected dust can be
+effortlessly released at the user's discretion, eliminating the need for manual cleaning and the
+associated hassles.
+\newline
+\newline
+\\
+\textbf{Keywords:} Self-cleaning ceiling fans, Specialized sensors, Cutting-edge technology, Cleaning task, Integrated dust collection, User control.
+\end{normalsize}\\\\\\\\\\\\\\\\\\\\
+\begin{normalsize}
+    \begin{center}
+    \vspace*{\fill}
+    \textbf{V}
+    \end{center}
+    \end{normalsize}
+\end{titlepage}
+%=====================LIST-OF-FIGURES======================================
+\begin{titlepage}
+
+\begin{center}
+\vspace{-100cm}
+    \textbf{\large LIST OF FIGURES}
+\end{center}
+
+\begin{center}
+\begin{normalsize}
+     \begin{tabular}{|c|l|c|} 
+     \hline
+     \normalsize\textbf{Figure No.} & \normalsize\textbf{Figure Name} & \normalsize\textbf{Page No.} \\
+     \hline
+     3.2 & Dust-Free Delight Architecture & 9\\ \hline
+     3.4.1 & Power Flow & 11\\ \hline
+     3.4.2 & Transformer & 14\\ \hline
+     3.4.3 & ESP32 & 15\\ \hline
+     3.4.4 & Servo SG90 & 16\\ \hline
+     3.4.5 & DC Motor & 17\\ \hline
+     3.4.6 & L293D & 19\\ \hline
+     3.4.7 & 12-volt Battery & 22\\ \hline
+     3.4.8 & LDR Sensor & 23\\ \hline
+     3.4.9 & IR Sensor & 24\\ \hline
+     3.4.10 & LM2596 & 25\\ \hline
+     3.5.1.1 & Arduino IDE & 26\\ \hline
+     3.5.1.2 & ESP32 Installation & 27\\ \hline
+     3.5.1.3 & Board Selection & 28\\ \hline
+     3.5.1.4 & Port Selection & 28\\ \hline
+     3.5.2 & Telegram bot & 29\\ \hline
+     4.1.2 & HTTPS Protocol & 31\\ \hline
+     5.1 & Dust-Free Delight Circuit Diagram & 34\\ \hline
+     5.2 & Dust-Free Delight Flowchart & 35\\ \hline
+     6.1 & Dust-Free Delight Prototype & 44\\ \hline
+     6.2 & Cleaning mechanism is activated and notification got in Telegram bot & 46\\ \hline
+     
+     
+     
+     \end{tabular}
+    \begin{normalsize}
+    \begin{center}
+    \vspace*{\fill}
+    \textbf{VI}
+    \end{center}
+\end{normalsize}
+\end{normalsize}
+\end{titlepage}
+
+
+
+%==========================================================================
+\newpage
+%=====================CONTENTS=============================================
+\begin{titlepage}
+\begin{center}
+    \textbf{\Large CONTENTS}
+\end{center}
+\vspace*{0.20in}
+\noindent 
+{\begin{normalsize}
+\textbf{\tab TOPIC}
+\end{normalsize}
+}
+\hfill 
+{
+\begin{normalsize}
+\textbf{PAGE NO.}
+\end{normalsize}
+}\\
+%===========================================================================
+%==========================================================================
+\noindent 
+{\begin{large}
+\textbf{ \tab Abstract}
+\end{large}
+}
+\hfill
+{
+\begin{normalsize}
+\textbf{V}
+\end{normalsize}
+}\\
+%==========================================================================
+\noindent 
+{\begin{large}
+\textbf{ \tab List of Figures}
+\end{large}
+}
+\hfill 
+{
+\begin{normalsize}
+\textbf{VI}
+\end{normalsize}
+}\\
+%=============================================================================
+\noindent 
+{\begin{large}
+\textbf{\tab 1. Introduction}
+\end{large}
+}
+\hfill 
+{
+\begin{large}
+\textbf{1}
+\end{large}
+}
+
+\noindent 
+{\begin{large}
+\text{ \tab\tab  1.1  Motivation }
+\end{large}
+}
+\hfill 
+{
+\begin{large}
+\textbf{2}
+\end{large}
+}
+
+\noindent 
+{\begin{large}
+\text{ \tab\tab  1.2  Objective }
+\end{large}
+}
+\hfill 
+{
+\begin{large}
+\textbf{2}
+\end{large}
+}
+
+\noindent 
+{\begin{large}
+\text{ \tab\tab  1.3  Modules }
+\end{large}
+}
+\hfill 
+{
+\begin{large}
+\textbf{3}
+\end{large}
+}
+
+
+\noindent 
+{\begin{large}
+\textbf{\tab 2. Literature Survey}
+\end{large}
+}
+\hfill 
+{
+\begin{large}
+\textbf{4}
+\end{large}
+}
+\\
+\noindent 
+{\begin{large}
+\textbf{\tab 3. System Design }
+\end{large}
+}
+\hfill 
+{
+\begin{large}
+\textbf{8}
+\end{large}
+}
+
+\noindent 
+{\begin{large}
+\text{ \tab\tab 3.1  Proposed System }
+\end{large}
+}
+\hfill 
+{
+\begin{large}
+\textbf{8}
+\end{large}
+}
+
+\noindent 
+{\begin{large}
+\text{ \tab\tab 3.2  Architecture }
+\end{large}
+}
+\hfill 
+{
+\begin{large}
+\textbf{9}
+\end{large}
+}
+
+\noindent 
+{\begin{large}
+\text{ \tab\tab  3.3  Software and Hardware Requirements }
+\end{large}
+}
+\hfill 
+{
+\begin{large}
+\textbf{9}
+\end{large}
+}
+
+\noindent 
+{\begin{large}
+\text{ \tab\tab  3.4  Hardware Design }
+\end{large}
+}
+\hfill 
+{
+\begin{large}
+\textbf{10}
+\end{large}
+}
+
+\noindent 
+{\begin{large}
+\text{ \tab\tab  3.5  Software Design }
+\end{large}
+}
+\hfill 
+{
+\begin{large}
+\textbf{26}
+\end{large}
+}
+
+
+
+\noindent 
+{\begin{large}
+\textbf{\tab 4. Methodology}
+\end{large}
+}
+\hfill 
+{
+\begin{large}
+\textbf{30}
+\end{large}
+}
+
+\noindent 
+{\begin{large}
+\text{ \tab\tab 4.1  System Modules }
+\end{large}
+}
+\hfill 
+{
+\begin{large}
+\textbf{30}
+\end{large}
+}
+
+
+
+\noindent 
+{\begin{large}
+\textbf{\tab 5. Implementation}
+\end{large}
+}
+\hfill 
+{
+\begin{large}
+\textbf{34}
+\end{large}
+}
+
+\noindent 
+{\begin{large}
+\text{ \tab\tab  5.1 Circuit Diagram }
+\end{large}
+}
+\hfill 
+{
+\begin{large}
+\textbf{34}
+\end{large}
+}
+
+\noindent 
+{\begin{large}
+\text{ \tab\tab  5.2 Flow chart }
+\end{large}
+}
+\hfill 
+{
+\begin{large}
+\textbf{35}
+\end{large}
+}
+
+
+\noindent 
+{\begin{large}
+\text{ \tab\tab  5.3 Procedure }
+\end{large}
+}
+\hfill 
+{
+\begin{large}
+\textbf{35}
+\end{large}
+}
+
+\noindent 
+{\begin{large}
+\text{ \tab\tab  5.4 Code }
+\end{large}
+}
+\hfill 
+{
+\begin{large}
+\textbf{37}
+\end{large}
+}
+
+\noindent 
+{\begin{large}
+\textbf{\tab 6. Results and Discussions}
+\end{large}
+}
+\hfill 
+{
+\begin{large}
+\textbf{43}
+\end{large}
+}
+
+
+\noindent 
+{\begin{large}
+\text{ \tab\tab 6.1  Results } 
+\end{large}
+}
+\hfill 
+{
+\begin{large}
+\textbf{43}
+\end{large}
+}
+
+
+\noindent 
+{\begin{large}
+\text{ \tab\tab 6.2 Discussions } 
+\end{large}
+}
+\hfill 
+{
+\begin{large}
+\textbf{45}
+\end{large}
+}
+
+
+
+
+\noindent 
+{\begin{large}
+\textbf{\tab 7. Conclusion and Future Scope}
+\end{large}
+}
+\hfill 
+{
+\begin{large}
+\textbf{48}
+\end{large}
+}
+
+\noindent 
+{\begin{large}
+\text{ \tab\tab 7.1 Conclusion } 
+\end{large}
+}
+\hfill 
+{
+\begin{large}
+\textbf{48}
+\end{large}
+}
+
+
+
+
+\newline
+\noindent 
+{\begin{large}
+\textbf{\tab 8. References}
+\end{large}
+}
+\hfill 
+{
+\begin{large}
+\textbf{50}
+\end{large}
+}
+
+
+\end{titlepage}
+%==========================================================================
+
+
+\newpage
+
+\pagestyle{fancy}
+\rhead{\footnotesize  Dirt Defender Ceiling Fan }
+\fancyfoot[L]{\footnotesize Department of Information Technology}
+\fancyfoot[R]{\footnotesize\thepage}
+\begin{center}
+\section{\Large INTRODUCTION}
+\end{center}
+\begin{normalsize}
+
+\tab The Dirt Defender Ceiling Fan system represents a groundbreaking innovation set to redefine the realm of fan maintenance. This visionary system introduces a transformative approach to preserving the cleanliness and efficiency of ceiling fans, seamlessly blending state-of-the-art technology with pragmatic design principles.
+\\\\
+\tab  
+Addressing the enduring challenge of dust accumulation on fan blades, this system pioneers a revolutionary method by harnessing specialized sensors that mimic the perceptual capabilities of the human eye. These sensors autonomously detect the buildup of dust, marking a significant departure from traditional manual inspection methods.
+\\\\
+\tab
+By harnessing the power of a dedicated mobile application, users are bestowed with unprecedented control over the cleaning process. With a simple tap on their mobile device, users can initiate the cleaning cycle, thereby eliminating the labor-intensive and time-consuming task of manual intervention.
+\\\\
+\tab
+The system's ingenious mechanical components, such as small brushes or rubber wipers, work in harmony to deliver gentle yet remarkably effective cleaning. This meticulous cleaning regimen optimizes fan performance and longevity without inconveniencing users with complex maintenance procedures.
+\\\\
+\tab
+Moreover, the integration of an innovative dust collection mechanism represents a paradigm shift in fan upkeep. By efficiently storing removed dust in a designated container, the system offers users unparalleled convenience, ensuring a hassle-free experience in maintaining pristine fan blades.\\\\\
+
+\newpage
+
+\begin{large}
+\textbf{1.1. Motivation}
+\end{large}
+\newline
+\tab The motivation driving the development of the Dirt Defender Ceiling Fan system stems from the inherent challenges of maintaining ceiling fans. Dust accumulation on fan blades poses a significant issue, impacting both fan efficiency and the arduousness of cleaning. Recognizing the inconvenience and time-consumingnature of traditional cleaning methods, this innovative system is designed to simplify the maintenance process by proactively detecting dust accumulation through advanced sensors.\\
+\newline
+\tab   This proactive approach not only streamlines fan upkeep but also contributes to sustainability by reducing energy wastage associated with dust-laden blades.
+Moreover, by incorporating user-friendly controls via a dedicated mobile app and integrating a smart dust collection mechanism, the system aims to alleviate the
+burden of manual cleaning while ensuring optimal fan performance. Ultimately,
+the motivation behind the Dirt Defender Ceiling Fan system is to redefine fan
+maintenance, offering users a hassle-free and efficient solution that enhances fan
+longevity and performance.
+\\\\
+\begin{large}
+\textbf{1.2. Objective}
+\end{large}\\
+
+\tab The primary objective driving the development of the Dirt Defender Ceiling
+Fan system is to redefine and streamline the maintenance process of ceiling fans.
+This innovative system aims to revolutionize fan upkeep by utilizing cutting-edge
+technology, including specialized sensors, to autonomously detect dust accumulation on fan blades. Through this proactive approach, the system seeks to reduce
+the need for manual cleaning, ensuring optimal fan performance while prolonging
+the fan’s lifespan. Additionally, the integration of a dedicated mobile app empowers users to effortlessly initiate the cleaning process with a simple tap, providing a
+user-friendly experience. The system’s mechanical components, such as brushes
+or wipers, facilitate gentle and effective cleaning, optimizing fan efficiency without requiring constant user intervention. Moreover, the innovative dust collection mechanism efficiently stores removed dust, eliminating the inconvenience of
+manual cleaning and enhancing the overall convenience of fan maintenance. Ultimately, the objective of the Dirt Defender Ceiling Fan system is to introduce
+a comprehensive, technology-driven solution that simplifies fan upkeep, extends
+fan longevity, and ensures optimal performance in residential and commercial settings
+\\\\
+\begin{large}
+\textbf{1.3. Modules}
+\end{large}
+\begin{enumerate}
+
+    \text{1) Sensor Module } \\
+    \text{2) Cleaning Mechanism }\\
+    \text{3) Telegram bot Module}\\
+    
+\end{enumerate}
+ 
+
+\newpage
+\begin{center}
+\section{ \Large LITERATURE SURVEY}
+\end{center}
+
+
+\tab The information regarding the user’s experience with
+ existing ceiling-fan cleaning tools is obtained and few new
+ designs are proposed for addressing the user’s problems.
+ A user survey was performed. From the result, it’s been
+ observed that the user felt some pain/ discomfort in certain
+ body regions like the neck, shoulder, and arm, as well as a
+ major strain on the lumbar area. The other major concerns
+ were also observed such as reachability, ease of usage,
+ and ease of implementation (interactions with the product)
+ while using the existing ceiling-fan cleaning tools/equipment
+ [1]. The existing manual cleaning system’s limitations, such
+ as human effort, sluggishness, and the risk of accidents
+ are outlined, and the proposed solution involving a scissor
+ lift mechanism actuated by a lead screw arrangement and
+ controlled by an Atmega 16A microcontroller is proposed.[2]
+ The system description details the methodology of cleaning
+ the fan blades and the components involved, such as the
+ microcontroller, motors, proximity sensors, electromagnet,
+ and cleaning brush [3]. A comprehensive overview of a
+ smart home automation system using Arduino as the master
+ controller is provided. While the specific focus of the paper is
+ on security systems, temperature sensing, and voice control,
+ the principles and components discussed can be adapted for
+ developing self-cleaning fans [4]. The Arduino board, along with
+ various sensors and actuators, can be utilized to monitor
+ the cleanliness of the fan blades and trigger a cleaning
+ mechanism when necessary. The low-cost and open-source
+ nature of the proposed system makes it a viable option
+ for developing self-cleaning fans with added functionality
+ [5]. The objective is to develop an IOT-enabled automatic
+ vacuum cleaner using Arduino that can be controlled by
+ using smartphone. Additionally, this robot is equipped with
+ HC-SR04 ultrasonic sensors that can detect walls, obstacles,
+ and cliffs. When there are obstacles in front of the robot,
+ its movement will be modified according to the Arduino
+ Mega algorithm. With the addition of a wireless ESP8266
+ receiver module, the robot can be controlled wirelessly via
+ a smartphone running the Blynk application. The user can
+ choose between two modes of automatic cleaning, or they
+ can control it manually. By incorporating these elements , we
+ can create an IoT-enabled ceiling fan cleaning system that of
+fers advanced features and seamless control through a smart
+phone application [6]. Wireless Sensor Networks (WSN) in
+ home automation are explored, emphasizing their integration
+ into smart home systems for enhanced convenience and effi
+ciency. Extensive research in this domain showcases the evo
+lution of cleaning systems, highlighting the transition from
+ traditional vacuum cleaners to advanced, compact, and less
+ intrusive smart devices suitable for office, public spaces, and
+ homes. Within the context of smart cleaning devices, robotics
+ and autonomous navigation systems have been extensively
+ studied, focusing on algorithms, sensors, and mapping tech
+niques that enable autonomous movement and environment
+ mapping [7]. Furthermore, literature reviews emphasize user
+centric studies, emphasizing user preferences, usability, and
+ satisfaction factors when using smart cleaning appliances.
+ Discussions also encompass challenges faced in achieving
+ full autonomy, efficiency, and scalability in smart vacuum
+cleaners, while exploring future directions such as enhancing
+ navigation, optimizing cleaning algorithms, and integrating
+ emerging technologies to further improve performance [8].
+ An in-depth examination of existing research on automated
+ cleaning systems is conducted, particularly emphasizing their
+ application in high-rise structures with glass facades. This
+ survey explores the challenges inherent in manual cleaning
+ processes and highlights the risks involved for human work
+ers, underscoring the need for safer and more efficient solutions [10]. It reviews prior studies on robotic cleaning systems,
+ focusing on their mechanisms for traversing vertical glass
+ surfaces, including structural designs, pneumatic systems,
+ suction technologies, and control mechanisms. Moreover,
+ the survey recognizes the expanding relevance of robotics
+ in addressing maintenance issues in smart buildings and
+ identifies potential applications beyond high-rise structures,
+ such as in the cleaning of large solar panels. We can also
+ adapt these traversing technologies and control mechanisms
+ into our project [11]. An investigation is conducted into au
+tonomous cleaning robots, focusing on their climbing mech
+anisms, control systems, vacuum technologies, safety features, battery management, and future prospects. It explores
+ existing research on robots designed for cleaning, specifically
+ addressing their capabilities on vertical surfaces like glass,
+ while delving into control mechanisms, suction systems, and
+ motion planning algorithms vital for efficient cleaning which
+ can be incorporated into our dirt defender ceiling fan system.
+ Additionally, it scrutinizes safety measures like fraud detection, emphasizes battery efficiency for prolonged operations,
+ and highlights challenges and potential research avenues for
+ enhancing these autonomous glass cleaning systems [12]. This
+ construction of a cleaning robot is focused, which provides
+ wireless remote monitoring services [13]. Through modifying a
+ commercial cleaning robot, various environment sensors,
+ vision and networking capability are added to the system.
+ It has many advantages over the traditional cleaning robot.
+ This whole system consists of an IP camera, a computer,
+ and a control board that drives motors on the cleaning robot.
+ Besides, there are many sensors equipped on the robot, so it
+ can measure surroundings and upload the data to the Appserv web server through Wi-Fi. The user can access the data in
+ the server by using web browser [14]. Moreover the user can also
+ control the robot remotely with mobile app. We can include
+ the remote control feature into our system [8]. The computer
+ functions were replaced with the ESP32 microcontroller, and
+ the website server as well as the application interface was replaced with the Telegram BOT. The ESP32 microcontroller [15]
+ was chosen because its function is almost the same as a
+ computer, while the Telegram BOT can be used free of
+ charge. This study focuses on testing the success rate of the
+ system in responding to commands given via the Telegram
+ BOT, with the type of command connecting the Telegram
+ BOT with ESPCam, turning on or off the LED flash, taking
+ pictures, and the combination [16]. Based on the tests that have
+ been carried out for all existing command combinations, with
+ each test being repeated 25 times, it was found that the
+ success rate of the system reached 84.67%. The Telegram
+ BOT serves as the interface for controlling our IoT-enabled [17]
+ cleaning system(Dirt Defender Ceiliing fan), emphasizing its
+ free availability and user-friendly command-based interac
+tion. It highlights the security provided by HTTPS (HTTPSecure) in communication between the ESP32 board and the
+ Telegram Bot API server:
+ Data Encryption: HTTPS encrypts data during transmission,
+ preventing unauthorized access to sensitive information.[18]
+ Authentication: It verifies the server’s identity using digital
+ certificates, ensuring that the client communicates with the
+ legitimate server and not a malicious entity.
+ Data Integrity: HTTPS maintains data integrity by detecting
+ any tampering or modification of data, ensuring that trans
+mitted data remains unchanged.
+ Overall, HTTPS ensures a secure and trustworthy connec
+tion, protecting against eavesdropping, data manipulation,
+ and impersonation attempts.[19]. The automatic solar panel
+ cleaning system based on Arduino for dust removal can
+ serve as a model for developing a self-cleaning ceiling fan.
+ By adapting the two-step cleaning mechanism and the use
+ of easily accessible components, a similar system can be
+ designed for ceiling fan blades. The use of a wiper for dust
+ removal, along with the integration of a microcontroller for
+ control, can be applied to a ceiling fan for self-cleaning
+ purposes . The proposed system aims to address the gradual
+ decrease in solar panel efficiency due to dust accumulation,
+ particularly in dry or desert areas, and is found to operate
+ with an efficiency of 87-96\% for different types of sand.
+ The hardware implementation includes the use of easily
+ accessible components such as a solar panel, microcon troller (Arduino Uno), metallic DC gear motor, buck boost
+ converter, and motor drive module, with the system being
+ controlled by a microcontroller and a light dependent resistor
+ (LDR) for sunlight tracking. By leveraging the principles
+ and components outlined in the paper, a self-cleaning ceiling
+ fan can be developed to improve efficiency and reduce
+ maintenance requirements [20].
+\newpage
+
+\begin{center}
+\section{ \Large  SYSTEM  DESIGN}
+\end{center}
+\\\\
+\begin{large}
+\textbf{3.1 Proposed System}
+\end{large}
+    \\
+
+\tab The proposed Dirt Defender Ceiling Fan system offers a groundbreaking solution to the perennial problem of ceiling fan maintenance. Utilizing state-ofthe-art technology, this innovative system is designed to simplify the upkeep of
+both residential and commercial ceiling fans. At the core of its functionality are
+specialized sensors, reminiscent of human eyes, adept at autonomously detecting dust buildup on fan blades. Once significant accumulation is detected, these
+sensors communicate with a dedicated mobile app, empowering users to trigger
+the cleaning process effortlessly. This process involves ingeniously designed mechanical components employing gentle brushes or rubber wipers to effectively
+remove dust from the fan blades. What distinguishes this system is its integrated
+dust collection mechanism, efficiently storing the removed debris in a designated
+container. This collected dust can be conveniently disposed of at the user’s convenience, eliminating the laborious manual cleaning traditionally associated with
+ceiling fan maintenance.
+\\\\
+\newpage
+\\
+\begin{large}
+\textbf{3.2 Architecture}
+\end{large}
+\\
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=12cm,height=10.2cm]{Archi.jpeg}
+\end{center}
+\begin{center}
+\renewcommand{\thefigure}{3.2}
+\caption{\footnotesize Dust-Free Delight Architecture}
+\end{center}
+\end{figure}
+
+
+\begin{large}
+\textbf{ 3.3  Software and Hardware Requirements}\\
+\end{large}\\ 
+\begin{large}
+\textbf{Software}
+\end{large}
+\begin{enumerate}
+    \text{i) Telegram bot } \\
+    \text{ii) IDE: Arduino }\\
+\end{enumerate}
+\newpage
+\begin{large}
+\textbf{Hardware}
+\end{large}
+\begin{enumerate}
+    \text{i) Operating System: Windows 11} \\
+    \text{ii) Processor - Intel Core i3 }\\
+    \text{iii)  Memory(RAM) - 8 GB}\\
+    \text{iv) Hard disk: 1TB }\\
+    \text{v)  Transformer}\\
+    \text{vi) ESP32 }\\
+    \text{vii) Servo SG90}\\
+    \text{viii) DC Motor  }\\
+    \text{ix)  Motor Driver}\\
+    \text{x)  IR Sensor}\\
+    \text{xi)  LDR Sensor}\\
+    \text{xii)  Battery}\\
+    \text{xiii)  LM2596 Regulator}\\
+    
+\end{enumerate}
+
+
+\\
+\begin{large}
+\textbf{3.4 Hardware Design}
+\end{large}
+\\
+
+
+\textbf{3.4.1 Power Supply}\\
+\tab The power supply section is the section which provide +5V for the components to work. As shown in Figure 3.4.1, 
+IC LM7805 is used for providing a constant power of +5V.\\
+\tab The ac voltage, typically 220V, is connected to a transformer, which steps down that ac voltage 
+down to the level of the desired dc output. A diode rectifier then provides a full-wave rectified 
+voltage that is initially filtered by a simple capacitor filter to produce a dc voltage. This resulting 
+dc voltage usually has some ripple or ac voltage variation.\\
+\tab A regulator circuit removes the ripples and also retains the same dc value even if the input dc 
+voltage varies, or the load connected to the output dc voltage changes. This voltage regulation is 
+usually obtained using one of the popular voltage regulator IC units.\\
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=450pt,height=150pt]{power flow.png}
+\end{center}
+\begin{center}
+\renewcommand{\thefigure}{3.4.1}
+\caption{\footnotesize Power Flow}
+\end{center}
+\end{figure}
+
+ 
+\\\\\\
+
+\newline
+
+\textbf{3.4.2 Transformer}\\\\
+\tab Transformers convert AC electricity from one voltage to another with little loss of power as illustrated in Figure 3.4.2.
+Transformers work only with AC and this is one of the reasons why mains electricity is AC.\\
+\tab 
+Step-up transformers increase voltage, step-down transformers reduce voltage. Most power 
+supplies use a step-down transformer to reduce the dangerously high mains voltage (230V in India) 
+to a safer low voltage.\\
+\tab The input coil is called the primary and the output coil is called the secondary. There is no electrical 
+connection between the two coils; instead they are linked by an alternating magnetic field created 
+in the soft-iron core of the transformer. Transformers waste very little power so the power out is 
+(almost) equal to the power in. Note that as voltage is stepped down current is stepped up.\\
+\tab The transformer will step down the power supply voltage (0-230V) to (0- 6V) level. Then the 
+secondary of the potential transformer will be connected to the bridge rectifier, which is 
+constructed with the help of PN junction diodes. The advantages of using bridge rectifier are it will 
+give peak voltage output as DC.
+\\
+
+\begin{itemize}
+    \item Rectifier:
+There are several ways of connecting diodes to make a rectifier to convert AC to DC. The 
+bridge rectifier is the most important and it produces full-wave varying DC. A full-wave rectifier 
+can also be made from just two diodes if a centre-tap transformer is used, but this method is rarely 
+used now that diodes are cheaper. A single diode can be used as a rectifier but it only uses the 
+positive (+) parts of the AC wave to produce half-wave varying DC
+\item Bridge Rectifier:
+When four diodes are connected as shown in figure, the circuit is called as bridge rectifier. 
+The input to the circuit is applied to the diagonally opposite corners of the network, and the output 
+is taken from the remaining two corners. Let us assume that the transformer is working properly 
+and there is a positive potential, at point A and a negative potential at point B. the positive potential 
+at point A will forward bias D3 and reverse bias D4.
+The negative potential at point B will forward bias D1 and reverse D2. At this time D3 and D1 are 
+forward biased and will allow current flow to pass through them; D4 and D2 are reverse biased 
+and will block current flow.
+One advantage of a bridge rectifier over a conventional full-wave rectifier is that with a given 
+transformer the bridge rectifier produces a voltage output that is nearly twice that of the 
+conventional full-wave circuit.
+\begin{itemize}
+    \item The main advantage of this bridge circuit is that it does not require a special centre tapped 
+transformer, thereby reducing its size and cost.
+\item The single secondary winding is connected to one side of the diode bridge network and the load 
+to the other side as shown below.
+\item The result is still a pulsating direct current but with double the frequency.
+\end{itemize}
+\item Smoothing:
+Smoothing is performed by a large value electrolytic capacitor connected across the DC 
+supply to act as a reservoir, supplying current to the output when the varying DC voltage from the 
+rectifier is falling. The capacitor charges quickly near the peak of the varying DC, and then 
+discharges as it supplies current to the output.
+
+\item Voltage Regulators:
+Voltage regulators comprise a class of widely used ICs. Regulator IC units contain the circuitry for 
+reference source, comparator amplifier, control device, and overload protection all in a single IC. 
+IC units provide regulation of either a fixed positive voltage, a fixed negative voltage, or an 
+adjustably set voltage. The regulators can be selected for operation with load currents from 
+hundreds of milli amperes to tens of amperes, corresponding to power ratings from milli watts to
+tens of watts.\\
+\tab
+A fixed three-terminal voltage regulator has an unregulated dc input voltage, Vi, applied to one 
+input terminal, a regulated dc output voltage, Vo, from a second terminal, with the third terminal 
+connected to ground.\\
+\tab
+The series 78 regulators provide fixed positive regulated voltages from 5 to 24 volts. Similarly, the 
+series 79 regulators provide fixed negative regulated voltages from 5 to 24 volts. Voltage regulator 
+ICs are available with fixed (typically 5, 12 and 15V) or variable output voltages. They are also 
+rated by the maximum current they can pass. Negative voltage regulators are available, mainly for 
+use in dual supplies. Most regulators include some automatic protection from excessive current 
+('overload protection') and overheating ('thermal protection').\\
+\tab
+Many of the fixed voltage regulator ICs has 3 leads and look like power transistors, such as the 
+7805 +5V 1Amp regulator. They include a hole for attaching a heat sink if necessary.
+
+\end{itemize}
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=300pt,height=300pt]{Transformer.jpg}
+\end{center}
+\
+\begin{center}
+\renewcommand{\thefigure}{3.4.2}
+\caption{\footnotesize Transformer}
+\end{center}
+\end{figure}
+
+ 
+
+\\\\\
+\newpage
+\textbf{3.4.3 ESP32}\\\\
+\tab ESP32 is a series of low-cost, low-power system on a chip microcontrollers with integrated Wi-Fi and dual-mode Bluetooth. As shown in Figure 3.4.3, The ESP32 series employs either a Tensilica Xtensa LX6 microprocessor in both dual-core and single-core variations, Xtensa LX7 dual-core microprocessor or a single-core RISC-V microprocessor and includes built-in antenna switches, RF balun, power amplifier, low noise receive amplifier, filters, and power- management modules. ESP32 is created and developed by Espressif Systems, a Shanghai- based Chinese company,
+and is manufactured by TSMC using their 40 nm process. It is a successor to
+the ESP8266 microcontroller.
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=350pt,height=320pt]{WhatsApp Image 2024-05-28 at 10.21.43_a73fb68a.jpg}
+\end{center}
+\
+\begin{center}
+\renewcommand{\thefigure}{3.4.3}
+\caption{\footnotesize ESP32 Controller}
+\end{center}
+\end{figure}
+
+
+\newpage
+\\
+\textbf{3.4.4 Servo SG90}
+\\\\
+\tab The SG90 servo, a prevalent miniature actuator, features diminutive dimensions (approximately 23mm x 12mm x 29mm) yet delivers noteworthy torque of
+1.5 to 2.5 kg/cm and operates at a speed of 0.1 to 0.2 seconds per 60 degrees
+rotation without a load, as shown in Figure 3.4.4. Operating within a 4.8V to 6V voltage range, it relies
+on a small DC motor intricately connected to reduction gears, facilitating precise positioning aided by a potentiometer feedback mechanism. Controlled via
+pulse width modulation (PWM) signals ranging from 1ms to 2ms, this servo is
+extensively used in radio-controlled models, robotics, and automation, offering a
+rotational span of approximately 180 degrees to enable accurate angular adjustments, making it a favored choice for diverse applications in hobbyist projects and
+small-scale mechanisms.\\
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=400pt,height=250pt]{Servo.png}
+\end{center}
+\
+\begin{center}
+\renewcommand{\thefigure}{3.4.4}
+\caption{\footnotesize Servo SG90}
+\end{center}
+\end{figure}
+
+
+\\\\
+\textbf{3.4.5 DC Motor}\\\\
+\tab A DC motor in simple words is a device that converts direct current(electrical
+energy) into mechanical energy,  as illustrated in Figure 3.4.5. It’s of vital importance for the industry today. A
+DC motor is designed to run on DC electric power. Two examples of pure DC
+designs are Michael Faraday’s homo-polar motor (which is uncommon), and the
+ball bearing motor, which is (so far) a novelty. By far the most common DC motor
+types are the brushed and brushless types, which use internal and external commutation respectively to create an oscillating AC current from the DC source—so
+they are not purely DC machines in a strict sense. We in our project are using
+brushed DC Motor, which will operate in the ratings of 12v DC 0.6A. The speed
+of a DC motor can be controlled by changing the voltage applied to the armature
+or by changing the field current. The introduction of variable resistance in the armature circuit or field circuit allowed speed control. Modern DC motors are often
+controlled by power electronics systems called DC drives.\\
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=350pt,height=200pt]{motor.PNG}
+\end{center}
+\
+\begin{center}
+\renewcommand{\thefigure}{3.4.5}
+\caption{\footnotesize DC Motor}
+\end{center}
+\end{figure}
+
+
+
+\\\\\\\
+\textbf{3.4.6 Motor Driver}\\\\
+\tab L293D IC shown in the figure 3.4.6, generally comes as a standard 16-pin DIP (dual-in line package).
+This motor driver IC can simultaneously control two small motors in either direction; forward and reverse with just 4 microcontroller pins (if you do not use
+enable pins).
+\end{justify}
+
+\begin{justify}
+{\textbf{Some of the features (and drawbacks) of this IC are :}}
+\end{justify}
+\begin{enumerate}
+    \item Output current capability is limited to 600mA per channel with peak output current limited to 1.2A (non-repetitive). This means you cannot drive bigger motors
+with this IC. However, most small motors used in hobby robotics should work. If
+you are unsure whether the IC can handle a particular motor, connect the IC to
+its circuit and run the motor with your finger on the IC. If it gets really hot, then
+beware... Also note the words ”non-repetitive”; if the current output repeatedly
+reaches 1.2A, it might destroy the drive transistors.
+\item Supply voltage can be as large as 36 Volts. This means you do not have to worry
+much about voltage regulation.
+\item L293D has an enable facility which helps you enable the IC output pins. If an
+enable pin is set to logic high, then state of the inputs match the state of the
+outputs. If you pull this low, then the outputs will be turned off regardless of the
+input states
+\item The datasheet also mentions an ”over temperature protection” built into the IC.
+This means an internal sensor senses its internal temperature and stops driving the
+motors if the temperature crosses a set point
+\item Another major feature of L293D is its internal clamp diodes. This flyback diode
+helps protect the driver IC from voltage spikes that occur when the motor coil is turned on and off (mostly when turned off)
+\item  The logical low in the IC is set to 1.5V. This means the pin is set high only if
+the voltage across the pin crosses 1.5V which makes it suitable for use in high
+frequency applications like switching applications (upto 5KHz)
+\item  Lastly, this integrated circuit not only drives DC motors, but can also be used to
+drive relay solenoids, stepper motors etc
+\end{enumerate}
+\newpage
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=380pt,height=300pt]{Pin.png}
+\end{center}
+\
+\begin{center}
+\renewcommand{\thefigure}{3.4.6}
+\caption{\footnotesize  L293D Motor Driver}
+\end{center}
+\end{figure}
+\\\\
+\newline
+It works on the concept of H-bridge. H-bridge is a circuit which allows the voltage to be flown in 
+either direction. As you know voltage need to change its direction for being able to rotate the motor 
+in clockwise or anticlockwise direction, Hence H-bridge IC are ideal for driving a DC motor.
+In a single l293d chip there two h-Bridge circuit inside the IC which can rotate two dc motor 
+independently. Due its size it is very much used in robotic application for controlling DC motors. 
+Given below is the pin diagram of a L293D motor controller.
+There are two Enable pins on l293d. Pin 1 and pin 9, for being able to drive the motor, the pin 1 
+and 9 need to be high. For driving the motor with left H-bridge you need to enable pin 1 to high. 
+And for right H-Bridge you need to make the pin 9 to high. If anyone of the either pin1 or pin9 
+goes low then the motor in the corresponding section will suspend working. It’s like a switch.
+\\\\
+\textbf{Working of L293D:}
+\newline
+\tab
+The 4 input pins for this l293d, pin 2,7 on the left and pin 15 ,10 on the right as shown on the pin 
+diagram. Left input pins will regulate the rotation of motor connected across left side and right 
+input for motor on the right hand side. The motors are rotated on the basis of the inputs provided 
+across the input pins as LOGIC 0 or LOGIC 1.
+In simple you need to provide Logic 0 or 1 across the input pins for rotating the motor.\\\\
+\textbf{Voltage Specification:}
+\newline
+\tab
+VCC is the voltage that it needs for its own internal operation 5v; l293D will not use this voltage 
+for driving the motor. For driving the motor it has a separate provision to provide motor supply 
+VSS (V supply). L293d will use this to drive the motor. It means if you want to operate a motor 
+at 9V then you need to provide a Supply of 9V across VSS Motor supply.\\
+\tab
+The maximum voltage for VSS motor supply is 36V. It can supply a max current of 600mA per 
+channel. Since it can drive motors Up to 36v hence you can drive pretty big motors with this l293d.\\
+\tab
+VCC pin 16 is the voltage for its own internal Operation. The maximum voltage ranges from 5v 
+and up to 36v.
+
+
+
+\\\\\\\
+\newline
+\textbf{3.4.7 Battery}\\\\
+\tab
+A battery is a device consisting of one or more electrochemical cells that convert stored chemical 
+energy into electrical energy. We use a 12V battery, as shown in Figure 3.4.7. Batteries are another way to produce electricity. They are smaller 
+and more safe. Batteries have one end that is positive and one end that is negative. For batteries to 
+work, you need to make sure you put them in the right way. Batteries have become a common 
+power source for many household and industrial applications. \\
+\tab
+There are two types of batteries: primary batteries (disposable batteries), which are designed to be 
+used once and discarded, and secondary batteries (rechargeable batteries), which are designed to 
+be recharged and used multiple times. Batteries come in many sizes, from miniature cells used to 
+power hearing aids and wristwatches to battery banks the size of rooms that provide standby power 
+for telephone exchanges and computer data centers.\\
+\tab
+A battery is a device that converts chemical energy directly to electrical energy. It consists of a 
+number of voltaic cells; each voltaic cell consists of two half-cells connected in series by a 
+conductive electrolyte containing anions and cations. One half-cell includes electrolyte and the 
+electrode to which anions (negatively charged ions) migrate, i.e., the anode or negative electrode; 
+the other half-cell includes electrolyte and the electrode to which cation (positively charged ions) 
+migrate, i.e., the cathode or positive electrode. In the redox reaction that powers the battery, cations 
+are reduced (electrons are added) at the cathode, while anions are oxidized (electrons are removed) 
+at the anode. The electrodes do not touch each other but are electrically connected by the 
+electrolyte. Some cells use two half-cells with different electrolytes. A separator between half-cells 
+allows ions to flow, but prevents mixing of the electrolytes\\
+\tab
+Batteries are classified into two broad categories, each type with advantages and disadvantages.\\
+\begin{itemize}
+    \item Primary batteries irreversibly (within limits of practicality) transform chemical energy to 
+electrical energy. When the initial supply of reactants is exhausted, energy cannot be readily 
+restored to the battery by electrical means. 
+\item  Secondary batteries can be recharged; that is, they can have their chemical reactions 
+reversed by supplying electrical energy to the cell, restoring their original composition.
+\end{itemize}
+\\
+\tab Some types of primary batteries used, for example, for telegraph circuits, were restored to 
+operation by replacing the components of the battery consumed by the chemical reaction. 
+Secondary batteries are not indefinitely rechargeable due to dissipation of the active materials, loss 
+of electrolyte and internal corrosion.\\
+\tab Primary batteries can produce current immediately on assembly. Disposable batteries are intended 
+to be used once and discarded. These are most commonly used in portable devices that have low 
+current drain, are used only intermittently, or are used well away from an alternative power source, 
+such as in alarm and communication circuits where other electric power is only intermittently 
+available.\\
+\tab Secondary batteries must be charged before use; they are usually assembled with active materials 
+in the discharged state. Rechargeable batteries or secondary cells can be recharged by applying 
+electric current, which reverses the chemical reactions that occur during its use. Devices to supply 
+the appropriate current are called chargers or rechargers.
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=350pt,height=250pt]{Tzone-12-Volt-1.3-Amp-Rechargeable-Battery.jpg}
+\end{center}
+\
+\begin{center}
+\renewcommand{\thefigure}{3.4.7}
+\caption{\footnotesize 12-volt Battery}
+\end{center}
+\end{figure}
+
+
+\\\\
+\textbf{3.4.8 LDR Sensor}\\\\
+\tab The Light Dependent Resistor (LDR)
+ sensor is a key component in our IoT-enabled cleaning
+ system, playing a vital role in detecting ambient light
+ levels, as shown in Figure 3.4.8. This sensor’s resistance changes based on the
+ intensity of light, allowing the system to assess whether
+ cleaning is necessary based on the dust accumulation’s
+ impact on light penetration. By utilizing the LDR
+ sensor, our system can intelligently determine opti
+mal cleaning schedules, ensuring efficient and timely
+ maintenance of ceiling fan blades without unnecessary
+ cleaning cycles.\\
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=350pt,height=200pt]{ldr.jpg}
+\end{center}
+\
+\begin{center}
+\renewcommand{\thefigure}{3.4.8}
+\caption{\footnotesize LDR Sensor}
+\end{center}
+\end{figure}
+
+
+\textbf{3.4.9 IR Sensor}\\\\
+\tab The Infrared (IR) sensor is a pivotal component in our IoT-enabled cleaning system, serving as an
+ essential tool for detecting obstacles and edges during
+ the cleaning process, as shown in the figure 3.4.9. This sensor emits and receives
+ infrared radiation, enabling the system to accurately
+ identify objects in its path and adjust its cleaning
+ trajectory accordingly. By leveraging the capabilities
+ of the IR sensor, our system enhances its efficiency
+ and safety, ensuring thorough cleaning while avoiding
+ collisions and potential damage to both the device and
+ surrounding environment.\\
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=350pt,height=250pt]{ir.jpg}
+\end{center}
+\
+\begin{center}
+\renewcommand{\thefigure}{3.4.9}
+\caption{\footnotesize IR Sensor}
+\end{center}
+\end{figure}
+
+
+
+\\\\
+\textbf{3.4.10 LM2596 Regulator}\\\\
+\tab The LM2596 regulator is mono
+lithic integrated circuit ideally suited for easy and
+ convenient design of a step– down switching regulator
+ (buck converter), as shown in figure 3.4.10. It is capable of driving a 3.0 A load
+ with excellent line and load regulation. This device is
+ available in adjustable output version and it is inter
+nally compensated to minimize the number of external
+ components to simplify the power supply design. Since
+ LM2596 converter is a switch– mode power supply,
+ its efficiency is significantly higher in comparison with
+ popular three– terminal linear regulators, especially with
+ higher input voltages. The LM2596 operates at a switch
+ing frequency of 150 kHz thus allowing smaller sized
+ f
+ ilter components than what would be needed with lower
+ frequency switching regulators. Available in a standard
+ 5– lead TO– 220 package with several different lead
+ bend options, and D2PAK surface mount package. The
+ other features include a guaranteed 4\% tolerance on out
+put voltage within specified input voltages and output
+ load conditions, and 15\% on the oscillator frequency.
+ External shutdown is included, featuring 80 A (typical) standby current. Self protection features include switch
+ cycle– by– cycle current limit for the output switch, as
+ well as thermal shutdown for complete protection under
+ fault.
+\\
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=350pt,height=250pt]{lm2596.jpeg}
+\end{center}
+\
+\begin{center}
+\renewcommand{\thefigure}{3.4.10}
+\caption{\footnotesize LM2596 Regulator}
+\end{center}
+\end{figure}
+
+
+\\\\\\
+\newpage
+\begin{large}
+\textbf{3.5 Software Design}
+\end{large}
+    \\
+\\\\
+\textbf{3.5.1 Arduino Software }\\\\
+ We need to download the Arduino Software package for your operating system. When we’ve downloaded and opened the application you should see something like this, as shown in Figure 3.5.1.1.\\
+ 
+
+ \begin{figure}[htb]
+\begin{center}
+\includegraphics[width=300pt,height=310pt]{Arduino.jpg}
+\end{center}
+\
+\begin{center}
+\renewcommand{\thefigure}{3.5.1.1}
+\caption{\footnotesize  Arduino IDE}
+\end{center}
+\end{figure}
+
+
+    
+    
+    This is where you type the code you want to compile and send to the Arduino board.\\\\
+\begin{itemize}
+    \item Plug your ESP32 board as illustrated in Figure 3.5.1.2. and wait for the drivers to install (or install manually any that might be required)\\
+    \begin{figure}[htb]
+\begin{center}
+\includegraphics[width=450pt,height=250pt]{1.jpg}
+\end{center}
+\begin{center}
+\renewcommand{\thefigure}{3.5.1.2}
+\caption{\footnotesize ESP32 Installation}
+\end{center}
+\end{figure}
+
+    \item Start Arduino IDE
+
+\item Select your board in Tools $>$ Board menu, as shown in the below figure 3.5.1.3.\\
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=400pt,height=150pt]{2.jpg}
+\end{center}
+\begin{center}
+\renewcommand{\thefigure}{3.5.1.3}
+\caption{\footnotesize Board Selection}
+\end{center}
+\end{figure}
+\newpage
+\item Select the COM port that the board is attached to, as illustrated in the below figure 3.5.1.4.
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=400pt,height=120pt]{3.jpg}
+\end{center}
+\begin{center}
+\renewcommand{\thefigure}{3.5.1.4}
+\caption{\footnotesize Port Selection}
+\end{center}
+\end{figure}
+
+\item Compile and upload (You might need to hold the boot button while uploading)
+\end{itemize}
+\newpage
+
+
+\\\\
+\textbf{3.5.2 Telegram bot}\\\\
+\tab We've incorporated a Telegram bot, as shown in figure 3.5.2 for system control, simplifying the process. This bot acts as a convenient interface, enabling users to manage the system remotely using Telegram, a messaging app. By sending simple commands through the bot, such as adjusting lighting or checking system status, users can swiftly and easily control the functionalities of the system, enhancing accessibility and user-friendliness. This integration allows for seamless interaction with the system, making it more convenient and efficient for users to operate and monitor the functionalities through a familiar messaging platform.
+\newline
+\\
+\tab The Telegram Bot API utilizes HTTPS via the WiFiClientSecure library in our Arduino code, ensuring a secure and encrypted communication channel between our device and the Telegram servers. This allows our Arduino-based application to send and receive messages to and from Telegram users or groups securely over the internet.\\
+\\
+
+ \begin{figure}[htb]
+\begin{center}
+\includegraphics[width=300pt,height=150pt]{bot.png}
+\end{center}
+\
+\begin{center}
+\renewcommand{\thefigure}{3.5.2}
+\caption{\footnotesize  Telegram bot}
+\end{center}
+\end{figure}
+
+
+
+
+
+
+
+
+\newpage
+
+\begin{center}
+\section{ \Large  METHODOLOGY}
+\end{center}
+
+\\\\
+\begin{large}
+\textbf{4.1 System Modules}
+\end{large}
+\\\\
+\textbf{4.1.1 Sensor Module }\\\\
+ \tab The Dirt Defender Ceiling Fan system integrates advanced dust detection sensors that function akin to human eyes, perceiving and assessing dust accumulation on fan blades. These specialized sensors are strategically mounted on the fan blades, ensuring accurate and timely detection of dust and debris. The sensors operate autonomously, continuously monitoring the fan blades' cleanliness status. Once a significant amount of dust is detected, the sensors promptly send a signal to the system's control unit, triggering the cleaning process.
+ \\
+ \begin{itemize}
+        \item Dust Detection Sensors (LDR Sensor): These sensors are crucial components of the cleaning system, as they detect the accumulation of dust on fan blades. They are typically mounted on the fan blades themselves to ensure accurate and timely detection.
+        \item Edge Detection Sensors (IR Sensor): The Infrared (IR) sensor is a pivotal component in our IoT-enabled cleaning system, serving as an
+        essential tool for detecting obstacles and edges during the cleaning process. This sensor emits and
+        receives infrared radiation, enabling the system to accurately identify objects in its path and adjust its
+        cleaning trajectory accordingly.\\
+        
+\end{itemize}
+    
+\textbf{4.1.2 Communication Protocols }\\\\
+\tab To facilitate seamless data transmission from the sensors to the control unit and the dedicated mobile app, the system employs robust communication protocols. These protocols ensure reliable and real-time communication, allowing users to stay informed about the fan's cleaning status and take prompt action when needed. The integration of these communication protocols enhances the system's responsiveness and user experience.
+
+ \\
+ \begin{itemize}
+        \item Communication Protocols: The Telegram Bot API utilizes HTTPS Protocol, as shown in figure 4.1.2. via the WiFiClientSecure library in our Arduino code, ensuring a secure and encrypted communication channel between our device and the Telegram servers. This allows our Arduino-based application to send and receive messages to and from Telegram users or groups securely over the internet.
+        
+    \end{itemize}
+    \begin{figure}[htb]
+    \begin{center}
+    \includegraphics[width=300pt,height=150pt]{https.png}
+    \end{center}
+    \
+    \begin{center}
+    \renewcommand{\thefigure}{4.1.2}
+    \caption{\footnotesize  HTTPS Protocol}
+    \end{center}
+    \end{figure}
+\\
+\textbf{4.1.3 Cleaning Mechanism }\\\\
+\tab The cleaning mechanism of the Dirt Defender Ceiling Fan system is designed for optimal efficiency and effectiveness. It features mechanical components such as duster strategically positioned to clean the fan blades thoroughly. When activated, these components move along the fan blades, gently removing dust and debris without causing any damage. The cleaning process is orchestrated by a motor control system, which regulates the movement and speed of the cleaning components, ensuring comprehensive cleaning coverage.
+ \\
+
+
+ \textbf{4.1.4 Dust Collection Mechanism}\\\\
+ \tab An innovative feature of the Dirt Defender Ceiling Fan system is its integrated dust collection mechanism. As the cleaning components remove dust from the fan blades, the collected dust is efficiently stored in a designated container within the system. This container is designed for easy removal and disposal of the accumulated dust. Users have the flexibility to release the collected dust at their discretion, eliminating the need for manual cleaning and simplifying maintenance tasks.
+ \\\\
+\textbf{4.1.5 Telegram bot Module }\\\\
+ \tab In addition to the dedicated Android mobile app, the system offers integration with popular messaging platforms like Telegram. The Telegram bot module acts as an interface, allowing users to remotely monitor the fan's cleaning status and initiate cleaning processes using simple commands. This integration enhances accessibility and user-friendliness, providing a familiar platform for users to interact with the system effortlessly. By using wifiClientServer library.
+
+ 
+Overall, the Dirt Defender Ceiling Fan system revolutionizes ceiling fan maintenance by combining advanced sensors, intelligent cleaning mechanisms, and user-friendly interfaces. \\\\\
+
+\textbf{4.1.6 Algorithm }\\\\
+ \tab The algorithm outlines the sequence of steps followed by the cleaning system to detect dust accumulation and initiate cleaning actions. Here's a detailed breakdown of each step:
+ \\
+ \begin{itemize}
+ \item Step 1 - Initialization of Sensor, Motors, and IoT:
+ \newline Upon system startup, the sensor module, motor control system, and IoT (Internet of Things) connectivity are initialized. This includes calibration of sensors, motor positioning, and establishing communication channels.
+\item  Step 2 – Checking if Sensor Gets Triggered:
+\newline The system continuously monitors the dust detection sensors to check if they are triggered by the presence of dust on the fan blades. This real-time monitoring ensures prompt responsiveness to dust accumulation.
+
+ \item Step 3 – Update Servo Motor Position:
+ \newline If the sensors detect dust, the system updates the position of the servo motors. Servo motors are used to control the movement of cleaning components, such as brushes or wipers, ensuring they are directed towards the areas with dust accumulation.
+
+\item Step 4 – Direct Sensor Trigger Moves Cleaning Robot:
+\newline If a sensor is directly triggered by dust accumulation in a specific direction, the cleaning robot is moved in that direction. This targeted approach optimizes cleaning efficiency by focusing on areas with higher dust concentrations.
+ \item Step 5 – Stop:
+ \newline Once the cleaning robot has completed its cleaning cycle or if no further dust accumulation is detected, the system stops the cleaning process. This helps conserve energy and ensures that the cleaning robot operates only when necessary.
+ \end{itemize}
+ 
+By following this algorithm and leveraging the functionalities of each system module, the dust cleaning robot can effectively detect and remove dust from fan blades, providing improved air quality and system performance. The integration of the Telegram bot module further enhances user convenience and system accessibility, making it easier for users to monitor and control the cleaning process remotely.
+
+
+
+
+\newpage
+\begin{center}
+\section{ \Large IMPLEMENTATION }
+\end{center}
+\\\\
+\textbf{5.1 Circuit Diagram}\\
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=450pt,height=250pt]{circuit.png}
+\end{center}
+\
+\begin{center}
+\renewcommand{\thefigure}{5.1}
+\caption{\footnotesize Dust-Free Delight Circuit Diagram}
+\end{center}
+\end{figure}
+
+\\
+
+\vspace{4cm}
+
+
+\newpage
+\begin{large}
+\textbf{5.2 Flowchart}\\
+\end{large}
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=520pt,height=370pt]{Flow.png}
+\end{center}
+\
+\begin{center}
+\renewcommand{\thefigure}{5.2}
+\caption{\footnotesize  Dust-Free Delight Flowchart}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{large}
+\textbf{5.3 Procedure}\\
+\end{large}
+
+\begin{enumerate}
+    \item Connect Dusters above and below the ceiling fan blade, with a wheel which drives forward and backward which is combined with DC Motor and ESP32.
+    \item Attach servo motors to the cleaning mechanism (Wheel). Ensure proper wiring and connection to the ESP32 for control via motor drivers.
+    \item Mount the dust detection sensors(LDR) and edge detection sensors(IR) on the fan blades. Connect the sensors to the ESP32 microcontroller for data transmission.
+    \item Use 12V battery to supply power to the system.
+    \item The code begins by including several libraries necessary for the project: WiFi, WiFiClientSecure, UniversalTelegramBot, ArduinoJson, and Servo. These libraries provide functionality for connecting to WiFi networks, communicating with Telegram Bot API, handling JSON data, and controlling servo motors.
+    \item The network credentials (WiFi SSID and password) are defined for connecting the ESP32 board to the local WiFi network. This enables internet connectivity, allowing the ESP32 to communicate with the Telegram Bot API server.
+    \item The Telegram Bot token and chat ID are defined to initialize the Telegram bot. The bot is set up using the provided token, and the chat ID specifies which chat or user the bot will respond to.
+    \item Various hardware pins are defined for connecting components to the ESP32 board. This includes pins for LDR (Light Dependent Resistor), motor control (motorP and motorN for motor polarity), IR sensor, and a servo motor.
+    \item When LDRState is HIGH dust is detected , the bot sends a message to the user, and if the "/cleannow" command is received, the flag is set to 1, indicating that cleaning should start. When the "/cleanstop" command is received, the flag is set to 0, indicating that cleaning should stop. The servo motor is also controlled to move back and forth during the cleaning process.
+    \item The movement of the cleaning components forward and backward is controlled through the motorP and motorN pins And when an edge is detected it stops the motion. Forward Motion is achieved by setting motorP to HIGH and motorN to LOW and reverse for Backward Motion.
+\end{enumerate}
+
+
+\begin{large}
+\textbf{5.4 Code }\
+\end{large}
+
+\begin{verbatim}
+
+#include <WiFi.h>
+#include <WiFiClientSecure.h>
+#include <UniversalTelegramBot.h>
+#include <ArduinoJson.h>
+#include <Servo.h>
+
+// Network credentials
+const char* ssid = "dell";
+const char* password = "12345678";
+
+// Initialize Telegram BOT Token and Chat ID
+#define BOTtoken "5982198371:AAEL3cD2U6IyORf9zlOD_sl5-X85MXyhKbc"  
+
+// #define CHAT_ID "1328704992"
+#define CHAT_ID "2129129685"
+
+WiFiClientSecure client;
+UniversalTelegramBot bot(BOTtoken, client);
+
+const int LDR      = 13;   
+
+const int motorP   = 2;     
+const int motorN   = 4;
+
+const int IRsensor = 5; 
+
+static const int servoPin = 21;
+
+int LDRState0     = 0; 
+int irsensorstate = 0;
+int flag=0;
+
+int botRequestDelay = 1000;
+unsigned long lastTimeBotRan;
+
+Servo servo1;
+
+void setup() {
+   
+   Serial.begin(115200);   
+   
+   pinMode(LDR, INPUT);
+   
+   pinMode(motorP, OUTPUT);
+   pinMode(motorN, OUTPUT);
+   
+   servo1.attach(servoPin);
+   
+   WiFi.mode(WIFI_STA);
+   WiFi.begin(ssid, password);
+   
+   // Add root certificate for api.telegram.org
+   client.setCACert(TELEGRAM_CERTIFICATE_ROOT); 
+   bot.sendMessage(CHAT_ID, "Bot started up", "");
+}
+
+void loop() {
+   if (millis() > lastTimeBotRan + botRequestDelay)  {
+     int numNewMessages = bot.getUpdates(bot.last_message_received + 1);
+     
+     while(numNewMessages) {
+     Serial.println("got response");
+     handleNewMessages(numNewMessages);
+     numNewMessages = bot.getUpdates(bot.last_message_received + 1);
+     }
+
+     lastTimeBotRan = millis();
+    } 
+  
+  LDRState0     = digitalRead(LDR);
+  irsensorstate = digitalRead(IRsensor);
+    
+  if(LDRState0 == HIGH)
+  { 
+    String message = "Dirt Detected\n";
+    message = message + "/cleannow' to turn on cleaning\n";
+    message = message + "/cleanstop' to turn off cleaning\n";
+    bot.sendMessage(CHAT_ID, message, "");
+  }
+
+  if(flag==1)
+  {
+    irsensorstate=digitalRead(IRsensor);
+    while(irsensorstate==LOW)
+    {
+      irsensorstate=digitalRead(IRsensor);
+      digitalWrite(motorP,HIGH);
+      digitalWrite(motorN,LOW);
+    }
+      digitalWrite(motorP,LOW);
+      digitalWrite(motorN,LOW);
+      // bot.sendMessage(CHAT_ID, "Cleaning complete", "");
+  }
+  Serial.println(flag);
+
+}
+
+void handleNewMessages(int numNewMessages) {  
+    
+    for (int i=0; i<numNewMessages; i++) {
+    String chat_id = String(bot.messages[i].chat_id);
+    if (chat_id != CHAT_ID){
+      bot.sendMessage(chat_id, "Unauthorized user", "");
+      continue;
+    }
+     
+    String text = bot.messages[i].text;
+    Serial.println(text);
+ 
+    String from_name = bot.messages[i].from_name;
+ 
+    if (text == "/start") {
+      String welcome = "Welcome, " + from_name + ".\n";
+      welcome += "Use the following commands\n\n";
+      welcome += "/cleannow' to turn on cleaning \n";
+      welcome += "/cleanstop' to turn off cleaning \n";
+      bot.sendMessage(chat_id, welcome, "");
+    }
+
+    if (text == "/cleannow") {bot.sendMessage(chat_id, "Cleaning Now", "");
+                              //  digitalWrite(motorP,HIGH);
+                              //  digitalWrite(motorN,LOW);
+                              flag=1;
+                             }
+    if (text == "/cleanstop") {bot.sendMessage(chat_id, "Cleaning Stop", "");
+                              //  digitalWrite(motorP,LOW);
+                              //  digitalWrite(motorN,LOW);
+                                  for(int posDegrees = 0; posDegrees <= 180; posDegrees+
+                                  +) {
+                                          servo1.write(posDegrees);
+                                          Serial.println(posDegrees);
+                                          delay(20);
+                                      }
+
+                                  for(int posDegrees = 180; posDegrees >= 0; posDegrees-
+                                  -) {
+                                          servo1.write(posDegrees);
+                                          Serial.println(posDegrees);
+                                          delay(20);
+                                      }
+                                flag=0;
+                                }   
+                              
+                              }
+        }
+
+
+\end{verbatim}
+\\\\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\begin{center}
+\section{ \Large  RESULTS \& DISCUSSIONS}
+\end{center}
+\tab
+\begin{large}
+\textbf{6.1 Results}\\
+\end{large}
+
+\tab The implementation of the Dirt Defender Ceiling Fan system has yielded significant and positive results, as shown in figure 6.1 in simplifying fan upkeep:\\
+\begin{itemize}
+    \item The specialized sensors autonomously detect dust accumulation on fan blades, ensuring timely cleaning interventions and maintaining optimal fan performance.
+    \item Through a dedicated mobile app, users have gained control over the cleaning process with a simple tap, enhancing convenience and user experience, as illustrated in figure 6.2.
+    \item The system's mechanical components, such as small brushes or rubber wipers, effectively remove dust from fan blades without causing damage, ensuring efficient cleaning and prolonging fan lifespan.
+    \item The system's integrated dust collection mechanism efficiently stores removed dust in a designated container, eliminating the need for manual cleaning and reducing maintenance efforts.
+\end{itemize}
+
+\newpage
+
+\newpage
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=500pt,height=370pt]{R1.jpeg}
+\end{center}
+\
+\begin{center}
+\renewcommand{\thefigure}{6.1}
+\caption{\footnotesize  Dust-Free Delight Prototype}
+\end{center}
+\end{figure}
+
+
+
+
+
+
+\newpage
+\begin{large}
+\textbf{6.2 Discussions}\\
+\end{large}
+
+The successful implementation of the Dirt Defender Ceiling Fan system opens up discussions on several key points:\\
+\begin{itemize}
+    \item Technological Advancements: The system's utilization of cutting-edge technology, including specialized sensors and a dedicated mobile app, showcases advancements in home appliance maintenance, making fan upkeep more efficient and user-friendly.
+    \item User-Centric Design: The system's focus on user empowerment and convenience reflects a shift towards user-centric design in household technologies. By simplifying cleaning processes and providing control at the users' fingertips, the system enhances overall user satisfaction.
+    \item Efficiency and Sustainability: The system's efficient cleaning mechanism and integrated dust collection contribute to resource conservation and sustainability. By reducing manual cleaning efforts and optimizing maintenance processes, the system minimizes waste and promotes energy efficiency.
+    \item Future Applications and Innovations: The success of the Dirt Defender Ceiling Fan system paves the way for future innovations and applications in home appliance maintenance. Similar technologies may be developed for other household devices, further enhancing convenience and automation in everyday tasks.
+\end{itemize}
+\newpage
+
+\begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics[width=300pt, height=350pt]{R1.jpeg}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics[width=200pt, height=350pt]{Telegram.jpeg}
+\end{minipage}
+
+\begin{center}
+    \textbf{Figure 6.2: }Cleaning mechanism is activated and notification got in Telegram bot\\
+\end{center}
+
+\\
+\begin{large}
+\textbf{6.3 Advantages}\\
+\end{large}
+
+\\
+\begin{itemize}
+    \item Reduces the time and effort required for manual cleaning.
+    \item Minimizes exposure to dust, which can cause allergies and respiratory issues.
+    \item Keeps ceiling fans running efficiently by preventing dust buildup, potentially reducing energy consumption.
+    \item Maintains a higher standard of cleanliness, particularly in environments where hygiene is critical.
+    
+\end{itemize}
+
+\newline
+\vspace{2cm}
+\begin{large}
+\textbf{6.4 Disadvantages}\\
+\end{large}
+
+\\
+\begin{itemize}
+    \item Limited Range: One of the limitations of this project is its limited range, which may restrict its effectiveness in large spaces or buildings with multiple fan installations. Additional infrastructure or signal boosters may be required to overcome this limitation and ensure comprehensive coverage.
+    \item Maintenance: IoT-enabled devices often require firmware updates, software maintenance, and periodic hardware checks to ensure proper functionality, which adds to the maintenance overhead.\\
+\end{itemize}
+\\
+
+\begin{large}
+\textbf{6.5 Applications}\\
+\end{large}
+
+\\
+\begin{itemize}
+    \item Industries Sector: The Dirt Defender Ceiling Fan system finds application in industries where large-scale ceiling fan maintenance is required. It can automate fan cleaning processes in manufacturing plants, warehouses, and industrial facilities, reducing manual labor and ensuring optimal fan performance.
+    \item Remote Monitoring: The system is ideal for remote monitoring applications, allowing users to check fan status, dust levels, and cleaning schedules from anywhere using the mobile app. This feature is beneficial for property managers, facility operators, and homeowners who want to manage multiple fans remotely.
+\end{itemize}
+
+\newpage
+\begin{center}
+\section{ \Large  CONCLUSIONS \& FUTURE SCOPE}
+\end{center}
+\\\\
+\tab
+\begin{large}
+\textbf{7.1 Conclusion}\\
+\end{large}
+
+\tab The implementation of the cleaning mechanism within the Dirt Defender Ceiling Fan system marks a significant step forward in revolutionizing fan maintenance. The integration of an autonomous detection system with specialized sensors allows for accurate identification of dust accumulation, triggering a user-controlled cleaning process through a dedicated mobile app. The ingenious mechanical components, including small brushes or rubber wipers, effectively remove dust from fan blades, ensuring they remain debris-free. Additionally, the integrated dust collection system enhances convenience by storing removed particles in a designated container for easy disposal, showcasing a blend of innovative technology and practical design.
+\\
+
+\tab However, further real-world testing and user feedback will be essential to fine-tune and assess the system's efficacy in diverse environments before its full-scale deployment. Future advancements in dust collection and removal systems, such as increased storage capacity, improved disposal methods, upgraded filtration for better air quality, advanced sensors for adaptive cleaning, self-maintenance features, and energy-efficient designs, aim to enhance user-friendliness and effectiveness in maintaining cleaner indoor spaces.\\\\
+\begin{large}
+ \textbf{7.2 Future Scope}\\   
+\end{large}
+
+\begin{enumerate}
+    \item Increased Storage Capacity: Enhancing the dust collection system's storage capacity will reduce the frequency of emptying and disposal, improving user convenience.
+    \item Improved Disposal Methods: Implementing advanced disposal methods, such as automated or self-sealing containers, will streamline the maintenance process further.
+    \item Upgraded Filtration for Better Air Quality: Integrating advanced filtration mechanisms will contribute to maintaining cleaner indoor air quality by capturing finer particles.
+    \item Advanced Sensors for Adaptive Cleaning: Developing sensors capable of adaptive cleaning based on real-time data will enhance the system's efficiency and effectiveness.
+    \item Self-Maintenance Features: Introducing self-maintenance features, such as automated cleaning schedules or self-diagnostic capabilities, will minimize manual intervention and ensure optimal system performance.
+    \item Energy-Efficient Designs: Continued focus on energy-efficient designs, including optimized motor control and power management, will contribute to sustainability and reduced operating costs.
+\end{enumerate}
+
+
+
+
+
+\newpage
+\begin{center}
+\section{ \Large  REFERENCES}
+\end{center}
+
+\vspace*{0.08in}
+\begin{normalsize}
+
+[1] Albert M.S, Katti S, Muthiah A, “User and Market Research with Proposed Concepts for Ceiling-Fan Dust Cleaning”. In: Chakrabarti, D., Karmakar, S., Salve, U.R. (eds) Ergonomics for Design and Innovation, Lecture Notes in Networks and Systems, vol 391, 2022. \\
+
+[2] P, Senthil \& S, Vignesh \& K, Gomathi, "DESIGN AND IMPLEMENTATION OF AUTOMATED CLEANING OF CEILING
+ FAN". International Journal of Students’ Research in Technology \& Management, 2017.\\
+
+[3] Subhankar Chattoraj, "Smart Home Automation based on different sensors and Arduino as the master controller". Int J Sci Res Publ 5(10), 2018. \\
+
+[4] S. S. Shariffudin, M. B. Abdul Razak, P. S. Mohamad Saad, H.Hashim and M. H. Mamat, ''IOT-Enabled Vacuum Cleaner Using
+ Arduino", IEEE Symposium on Industrial Electronics \& Ap
+plications (ISIEA), Kuala Lumpur, Malaysia, 2023.\\
+
+[5] A. B. Soran, R. T. Biten and P. Kirci, "Designing a Smart Vacuum Cleaner", IEEE 16th International Conference on Computer Sciences and Information Technologies (CSIT), LVIV, Ukraine, 2021.\\
+
+[6] A. Salunke, S. Ramani, M. Caisucar, S. Dessai, V. Trindade and J. Vernekar, "Glass Cleaning Robot for High Rise Buildings", International Conference on Innovative Sustainable Computational Technologies (CISCT), Dehradun, India, 2019.  \\
+
+[7] L. Yiwen, E. M. Joo and O. L. Ping, "Design and Development of a Glass Cleaning Robot", Fourth International Conference on Intelligent Systems Design and Engineering Applications, Zhangjiajie, China, 2013.\\
+
+[8] G.-H. Kuo, C.-Y. Cheng and C.-J. Wu, "Design and implementation of a remote monitoring cleaning robot", 2014 CACS International Automatic Control Conference (CACS), Kaohsiung, Taiwan,2014. \\
+
+[9] Sudaryanto, Aris \& Sasongko, Dimas \& Kridoyono, Agung \& Putri Nourma Budiarti, Rizqi \& Mahadewi, Syilla \& Arvianto, Feby, ''ESPCam Control Using Telegram on ESP32 Microcontroller Based Security Camera Systems", Applied Technology and Computing Science Journal, 2022. \\
+
+[10] Habib, Md \& Tanvir, Md Shahnewaz \& Suhan, Ahmed \& Vadher, Abhishek \& Alam, Sanim \& Tashrif, Tahsina \& Ahmed, Koushik \& Alrashed, Abdelrhman, ''Automatic Solar Panel Clean
+ing System Based on Arduino for Dust Removal", 2021.\\
+
+[11] James Fuller, "Smart Edge Detection Robot using Arduino", 2024.\\
+
+[12] Najad, "Telegram Bot with ESP32– Control GPIO Pins through Telegram App", 2020.\\
+
+[13] Bestari, Dea \& Wibowo, Antoni, ''IoT Based Real-Time Weather Monitoring System Using Telegram Bot and Thingsboard
+ Platform", International Journal of Interactive Mobile Technologies (iJIM), 2023.\\
+
+ [14] Reddy, Arem & Jahnavi, M & Reddy, Vardhan & Reddy, P &
+ Raviteja, E, ''IOT Based DC Motor Speed and Direction
+ Control. International Journal of Scientific Research in Science and Technology", 2024.\\
+
+ [15] Ektesabi, Mehran \& Asghari Gorji, Saman \& Moradi, Amir \&
+ Yammen, Suchart \& Vennapusa, Mahesh, ''IoT-Based Home
+ Appliance System (Smart Fan)", 2018.\\
+
+ [16]  Occupational Safety and Health Administration, "Preventing Injuries and Hazards When Cleaning Ceiling Fans: Guidelines for Safe Practices.", OSHA Publication, 2018.\\
+
+ [17] Tenglong Yan, Xin Song, Xiaowen Ding, Xiaodong Liu, Tian
+ Lan, Tian Chen, Minghui Wang, Mengyang Wang, ''Exposure
+ to household dust, allergens, and endotoxin and allergy-related outcomes alternation in the general U.S. population", Environ
+mental Research, Volume 226, 2023.\\
+
+[18] S. Park, "Machine Learning-Based Smart Home Data Analysis and Forecasting Method", IEEE International Conference on Consumer Electronics (ICCE), Las Vegas, NV, USA, 2023.\\ 
+
+[19] A. R. Al-Ali, I. A. Zualkernan, M. Rashid, R. Gupta and M. Alikarar, ''A smart home energy management system using IoT and big data analytics approach", in IEEE Transactions on Consumer Electronics, vol. 63, no. 4, pp. 426-434, 2017.\\
+
+[20] Nc, Lenin \& Padmanaban, Sanjeevikumar \& Bhaskar Ranjana, Mahajan \& Mitolo, Massimo \& Hossain, Eklas, “Ceiling Fan Drives– Past, Present and Future", IEEE Access, 2021.
+
+
+
+
+\end{normalsize}
+\end{document}
+
+
+
+
+
+
+
+
+
+
